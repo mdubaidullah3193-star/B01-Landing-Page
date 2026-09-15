@@ -1,1127 +1,1475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>B01 — CPA Launchpad | Premium CPA Marketing Course</title>
-
-  <meta name="description"
-    content="B01 CPA Launchpad — Learn CPA Marketing, Digital Marketing, Traffic Generation, Landing Pages, Tracking, Conversion and Growth. Premium Launch Offer ৳199.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #5b4bff;
-      --primary-dark: #4435d9;
-      --secondary: #8068ff;
-      --text: #17172b;
-      --muted: #69697d;
-      --bg: #f7f8fc;
-      --white: #ffffff;
-      --border: #e9e9f2;
-      --success: #159957;
-      --shadow: 0 18px 55px rgba(42, 35, 100, .10);
-      --radius: 24px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Hind Siliguri", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* NAVBAR */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-family: "Inter", sans-serif;
-      font-weight: 800;
-      font-size: 21px;
-      letter-spacing: -.5px;
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    .nav-btn {
-      background: var(--primary);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .nav-btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 82px 0 55px;
-      background:
-        radial-gradient(circle at 10% 10%, rgba(128,104,255,.13), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(91,75,255,.10), transparent 28%),
-        var(--bg);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      padding: 8px 14px;
-      border: 1px solid #dddafe;
-      background: #f0eeff;
-      color: var(--primary-dark);
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(38px, 6vw, 66px);
-      line-height: 1.05;
-      letter-spacing: -2.8px;
-      margin-bottom: 22px;
-    }
-
-    h1 span {
-      color: var(--primary);
-    }
-
-    .hero-text {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 650px;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 23px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-      box-shadow: 0 12px 28px rgba(91,75,255,.25);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-light {
-      background: white;
-      border: 1px solid var(--border);
-    }
-
-    /* OFFER CARD */
-    .offer-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card::before {
-      content: "";
-      position: absolute;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: #eeeaff;
-      top: -80px;
-      right: -60px;
-    }
-
-    .offer-label {
-      color: var(--primary);
-      font-weight: 800;
-      position: relative;
-    }
-
-    .old-price {
-      color: #999;
-      text-decoration: line-through;
-      font-size: 19px;
-      margin-top: 20px;
-    }
-
-    .price {
-      font-family: "Inter", sans-serif;
-      font-size: 58px;
-      font-weight: 800;
-      letter-spacing: -3px;
-      margin: -2px 0 10px;
-    }
-
-    .limited {
-      display: inline-block;
-      background: #fff2df;
-      color: #a65d00;
-      padding: 6px 11px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .offer-list {
-      list-style: none;
-      margin: 22px 0;
-    }
-
-    .offer-list li {
-      padding: 8px 0;
-      font-weight: 600;
-    }
-
-    .offer-list li::before {
-      content: "✓";
-      color: var(--success);
-      font-weight: 800;
-      margin-right: 9px;
-    }
-
-    /* GENERAL SECTION */
-    section {
-      padding: 85px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 45px;
-    }
-
-    .eyebrow {
-      color: var(--primary);
-      font-family: "Inter", sans-serif;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(30px, 5vw, 44px);
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 14px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    /* HIGHLIGHTS */
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .highlight {
-      background: white;
-      border: 1px solid var(--border);
-      padding: 28px;
-      border-radius: var(--radius);
-      box-shadow: 0 10px 35px rgba(30,25,80,.06);
-    }
-
-    .highlight-number {
-      font-family: "Inter", sans-serif;
-      font-size: 35px;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    .highlight h3 {
-      font-size: 20px;
-      margin: 5px 0;
-    }
-
-    .highlight p {
-      color: var(--muted);
-    }
-
-    /* MODULES */
-    .modules {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .module {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 25px;
-      transition: .25s;
-    }
-
-    .module:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-      border-color: #d8d3ff;
-    }
-
-    .module-no {
-      display: inline-flex;
-      width: 42px;
-      height: 42px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      background: #efedff;
-      color: var(--primary);
-      font-family: "Inter", sans-serif;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .module h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .module p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* VIDEO */
-    .video-section {
-      background: #111126;
-      color: white;
-    }
-
-    .video-section .section-head p {
-      color: #c4c4d7;
-    }
-
-    .video-wrap {
-      max-width: 900px;
-      margin: auto;
-      background: #05050c;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 28px;
-      padding: 10px;
-      box-shadow: 0 25px 70px rgba(0,0,0,.30);
-    }
-
-    video {
-      display: block;
-      width: 100%;
-      border-radius: 20px;
-      background: #05050c;
-    }
-
-    .video-note {
-      text-align: center;
-      color: #bdbdd0;
-      font-size: 14px;
-      margin-top: 17px;
-    }
-
-    /* JOURNEY */
-    .journey {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 15px;
-    }
-
-    .journey-item {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 25px;
-    }
-
-    .journey-item strong {
-      font-family: "Inter", sans-serif;
-      color: var(--primary);
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .journey-item h3 {
-      margin: 7px 0;
-    }
-
-    .journey-item p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* PAYMENT */
-    .payment-box {
-      max-width: 850px;
-      margin: auto;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 35px;
-      box-shadow: var(--shadow);
-    }
-
-    .payment-methods {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 15px;
-      margin: 25px 0;
-    }
-
-    .payment {
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .payment strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-
-    .payment-number {
-      font-family: "Inter", sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: .5px;
-    }
-
-    .security {
-      background: #f2fbf6;
-      color: #24714a;
-      border-radius: 14px;
-      padding: 15px;
-      font-size: 14px;
-      margin-top: 18px;
-    }
-
-    /* FAQ */
-    .faq {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    details {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 20px;
-      margin-bottom: 12px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 17px;
-    }
-
-    details p {
-      color: var(--muted);
-      padding-top: 12px;
-    }
-
-    /* CTA */
-    .final-cta {
-      padding: 75px 0;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, #5b4bff, #8068ff);
-      color: white;
-      border-radius: 32px;
-      padding: 55px 30px;
-      text-align: center;
-      box-shadow: 0 25px 65px rgba(91,75,255,.24);
-    }
-
-    .cta-box h2 {
-      margin-bottom: 14px;
-    }
-
-    .cta-box p {
-      max-width: 650px;
-      margin: 0 auto 25px;
-      color: rgba(255,255,255,.88);
-      font-size: 17px;
-    }
-
-    .cta-box .btn {
-      background: white;
-      color: var(--primary-dark);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 30px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 850px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .highlights,
-      .modules {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .journey {
-        grid-template-columns: repeat(2,1fr);
-      }
-    }
-
-    @media (max-width: 560px) {
-      section {
-        padding: 65px 0;
-      }
-
-      .hero {
-        padding: 55px 0 40px;
-      }
-
-      h1 {
-        letter-spacing: -1.8px;
-      }
-
-      .hero-text {
-        font-size: 16px;
-      }
-
-      .highlights,
-      .modules,
-      .journey,
-      .payment-methods {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-card,
-      .payment-box {
-        padding: 24px;
-      }
-
-      .price {
-        font-size: 48px;
-      }
-
-      .nav-btn {
-        padding: 8px 13px;
-        font-size: 14px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b16">
+<title>B01 — CPA Launchpad | SKILLVAULT</title>
+
+<style>
+:root{
+  --bg:#070912;
+  --bg2:#0e1120;
+  --card:#111526;
+  --line:#262b3e;
+  --txt:#f7f8ff;
+  --muted:#a9aec4;
+  --gold:#f7c96b;
+  --purple:#8b7cff;
+  --cyan:#61e7ff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 10% 0%,#25204d 0,transparent 30%),
+    radial-gradient(circle at 90% 10%,#12333d 0,transparent 25%),
+    linear-gradient(180deg,var(--bg),var(--bg2),var(--bg));
+  color:var(--txt);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Noto Sans Bengali",
+    sans-serif;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.wrap{
+  width:min(1080px,92%);
+  margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#070912cc;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--gold),#fff3bd);
+  color:#17120a;
+}
+
+.brand small{
+  display:block;
+  color:#858ba2;
+  font-size:8px;
+  letter-spacing:2px;
+}
+
+.nav a{
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:8px 13px;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+  padding:65px 0 35px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:28px;
+  align-items:center;
+}
+
+.eyebrow,
+.tag{
+  display:inline-block;
+  border:1px solid #7c682d55;
+  background:#f7c96b0d;
+  color:#ffeab0;
+  border-radius:99px;
+  padding:7px 11px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+
+h1{
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin:18px 0;
+}
+
+.grad{
+  background:linear-gradient(
+    100deg,
+    #fff,
+    var(--gold),
+    var(--cyan)
+  );
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p,
+.lead{
+  color:var(--muted);
+}
+
+.hero p{
+  max-width:650px;
+  font-size:16px;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:23px 0;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 18px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  font-weight:900;
+  font-size:13px;
+}
+
+.primary{
+  background:linear-gradient(
+    135deg,
+    var(--gold),
+    #ffe9a0
+  );
+  color:#15110a;
+  box-shadow:0 12px 35px #f7c96b22;
+}
+
+/* TIMER */
+
+.timer{
+  margin-top:22px;
+  padding:16px;
+  border:1px solid #f7c96b33;
+  border-radius:20px;
+  background:#f7c96b0a;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.timer b{
+  display:block;
+  color:#ffedb4;
+  font-size:14px;
+}
+
+.timer small{
+  color:var(--muted);
+}
+
+.clock{
+  display:flex;
+  gap:6px;
+}
+
+.box{
+  min-width:55px;
+  text-align:center;
+  background:#0005;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:7px;
+}
+
+.box b{
+  font-size:19px;
+}
+
+.box span{
+  font-size:8px;
+  color:#858ba2;
+}
+
+/* HERO CARD */
+
+.art{
+  min-height:360px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:24px;
+  background:linear-gradient(
+    145deg,
+    #ffffff12,
+    #ffffff03
+  );
+  box-shadow:0 25px 80px #0007;
+}
+
+.vault{
+  height:100%;
+  min-height:310px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:22px;
+  background:#07091299;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.vault-title{
+  font-size:32px;
+  font-weight:1000;
+  line-height:1.05;
+  margin-top:20px;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:17px;
+}
+
+.metric{
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#ffffff08;
+}
+
+.metric strong{
+  display:block;
+  font-size:22px;
+}
+
+.metric span{
+  font-size:10px;
+  color:var(--muted);
+}
+
+.price{
+  font-size:42px;
+  font-weight:1000;
+  color:#fff0bd;
+}
+
+.old{
+  text-decoration:line-through;
+  color:#747a90;
+  font-size:14px;
+  margin-right:8px;
+}
+
+/* BANNER */
+
+.banner-section{
+  padding:18px 0 8px;
+}
+
+.banner-frame{
+  border:1px solid var(--line);
+  border-radius:26px;
+  overflow:hidden;
+  background:#050713;
+  box-shadow:0 24px 70px #0008;
+}
+
+.banner-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* SECTIONS */
+
+section{
+  padding:50px 0;
+}
+
+.head{
+  margin-bottom:20px;
+}
+
+.kicker{
+  color:var(--gold);
+  font-size:10px;
+  font-weight:1000;
+  letter-spacing:2px;
+}
+
+.head h2,
+h2{
+  font-size:clamp(28px,5vw,44px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  margin:5px 0;
+}
+
+/* STATS */
+
+.stats,
+.grid,
+.bonus-grid,
+.faq{
+  display:grid;
+  gap:10px;
+}
+
+.stats{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat,
+.card,
+.bonus,
+.pay{
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:#ffffff06;
+}
+
+.stat{
+  padding:16px;
+  text-align:center;
+}
+
+.stat strong{
+  display:block;
+  font-size:20px;
+}
+
+.stat span,
+.card p,
+.bonus p,
+details p{
+  font-size:11px;
+  color:var(--muted);
+}
+
+/* COURSE GRID */
+
+.grid{
+  grid-template-columns:repeat(3,1fr);
+  margin-top:18px;
+}
+
+.card{
+  padding:18px;
+}
+
+.card em{
+  font-style:normal;
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+}
+
+.card h3{
+  font-size:15px;
+  margin:8px 0 3px;
+}
+
+/* BONUS */
+
+.bonus{
+  padding:25px;
+  background:
+    radial-gradient(
+      circle at 85% 0,
+      #f7c96b18,
+      transparent 30%
+    ),
+    #ffffff05;
+}
+
+.bonus-grid{
+  grid-template-columns:repeat(2,1fr);
+  margin-top:17px;
+}
+
+.bonus-item{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#0003;
+}
+
+.bonus-item b{
+  font-size:13px;
+}
+
+/* PAYMENT */
+
+.payment{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:12px;
+}
+
+.pay{
+  padding:22px;
+}
+
+.number{
+  margin:15px 0;
+  padding:16px;
+  border-radius:15px;
+  background:#f7c96b0d;
+  border:1px solid #f7c96b33;
+  font-size:24px;
+  font-weight:1000;
+}
+
+.step{
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.step:last-child{
+  border:0;
+}
+
+.step b{
+  font-size:13px;
+}
+
+.step p{
+  margin:2px 0;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.notice{
+  padding:11px;
+  border-radius:13px;
+  background:#ff758c0a;
+  border:1px solid #ff758c22;
+  color:#c9cddd;
+  font-size:10px;
+}
+
+/* FAQ */
+
+.faq{
+  grid-template-columns:1fr 1fr;
+}
+
+details{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#ffffff05;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:850;
+  font-size:12px;
+}
+
+details p{
+  padding-top:8px;
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  padding:40px 20px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      #8b7cff22,
+      transparent 45%
+    ),
+    #ffffff05;
+}
+
+.cta p{
+  max-width:650px;
+  margin:8px auto 20px;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  color:#70768a;
+  font-size:10px;
+  padding:25px 0 40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+  .hero-grid,
+  .payment{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:550px){
+
+  .hero{
+    padding-top:42px;
+  }
+
+  .grid,
+  .bonus-grid,
+  .faq{
+    grid-template-columns:1fr;
+  }
+
+  .clock{
+    width:100%;
+  }
+
+  .box{
+    flex:1;
+    min-width:0;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="logo">B01 <span>CPA Launchpad</span></div>
+<!-- NAVBAR -->
 
-      <a class="nav-btn"
-         href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
-         target="_blank">
-        Order Now
+<nav>
+  <div class="wrap nav">
+
+    <a class="brand" href="#top">
+      <span class="logo">SV</span>
+
+      <span>
+        SKILLVAULT
+        <small>B01 • DIGITAL LEARNING</small>
+      </span>
+    </a>
+
+    <a href="#order">
+      Get Access →
+    </a>
+
+  </div>
+</nav>
+
+
+<main id="top">
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="wrap hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        ✦ B01 PREMIUM LAUNCH EDITION
+      </span>
+
+      <h1>
+        Learn more.<br>
+        <span class="grad">
+          Build smarter.
+        </span>
+      </h1>
+
+      <p>
+        B01 CPA Launchpad হলো একটি compact premium
+        learning vault—CPA Marketing-এর পাশাপাশি
+        Digital Skills, Content, Design ও Online Growth-এর
+        প্রয়োজনীয় resources এক জায়গায়।
+      </p>
+
+      <div class="actions">
+
+        <a class="btn primary" href="#order">
+          🚀 Premium Access নিন
+        </a>
+
+        <a class="btn" href="#vault">
+          ভেতরে কী আছে?
+        </a>
+
+      </div>
+
+
+      <!-- TIMER -->
+
+      <div class="timer">
+
+        <div>
+
+          <b>
+            ⏳ আপনার ৪ দিনের Access Window
+          </b>
+
+          <small>
+            প্রথম ভিজিট থেকে সময় গণনা শুরু হবে।
+          </small>
+
+        </div>
+
+
+        <div class="clock">
+
+          <div class="box">
+            <b id="d">04</b>
+            <span>DAYS</span>
+          </div>
+
+          <div class="box">
+            <b id="h">00</b>
+            <span>HOURS</span>
+          </div>
+
+          <div class="box">
+            <b id="m">00</b>
+            <span>MIN</span>
+          </div>
+
+          <div class="box">
+            <b id="s">00</b>
+            <span>SEC</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PREMIUM CARD -->
+
+    <div class="art">
+
+      <div class="vault">
+
+        <div>
+
+          <span class="tag">
+            ● PREMIUM VAULT
+          </span>
+
+          <div class="vault-title">
+
+            CPA<br>
+
+            <span class="grad">
+              Launchpad
+            </span>
+
+          </div>
+
+          <p class="lead">
+            A focused digital learning collection
+            by SKILLVAULT.
+          </p>
+
+
+          <div class="metrics">
+
+            <div class="metric">
+              <strong>25+</strong>
+              <span>Premium Courses</span>
+            </div>
+
+            <div class="metric">
+              <strong>1,000+</strong>
+              <span>Premium Video Lessons</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div>
+
+            <span class="old">
+              ৳20,000
+            </span>
+
+            <span class="price">
+              ৳199
+            </span>
+
+          </div>
+
+          <small class="lead">
+            Special launch access • Offer may change or end.
+          </small>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PREMIUM BANNER -->
+
+<section class="banner-section">
+
+  <div class="wrap">
+
+    <div class="banner-frame">
+
+      <img
+        src="B01-Premium-Banner.png"
+        alt="SKILLVAULT B01 CPA Launchpad Premium Banner"
+        loading="eager"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CORE VAULT -->
+
+<section id="vault">
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div class="kicker">
+        THE CORE VAULT
+      </div>
+
+      <h2>
+        এক নজরে পুরো B01
+      </h2>
+
+      <p class="lead">
+        কম কথায়, পরিষ্কারভাবে—
+        আপনি কী পাবেন, সব এক জায়গায়।
+      </p>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>25+</strong>
+        <span>Premium Courses</span>
+      </div>
+
+      <div class="stat">
+        <strong>1,000+</strong>
+        <span>Premium Video Lessons</span>
+      </div>
+
+      <div class="stat">
+        <strong>12+</strong>
+        <span>CPA Learning Topics</span>
+      </div>
+
+      <div class="stat">
+        <strong>🎁 BONUS</strong>
+        <span>Extra Resources</span>
+      </div>
+
+    </div>
+
+
+    <!-- MAIN COURSES -->
+
+    <div class="grid">
+
+      <div class="card">
+        <em>01</em>
+        <h3>CPA Marketing</h3>
+        <p>
+          Foundation, offers, networks,
+          traffic ও campaign concepts.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>02</em>
+        <h3>Advanced CPA</h3>
+        <p>
+          Optimization, promotion ও
+          practical learning resources.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>03</em>
+        <h3>Website & Landing Page</h3>
+        <p>
+          Online presence ও conversion-focused
+          page basics.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>04</em>
+        <h3>Facebook Marketing</h3>
+        <p>
+          Page, content, audience ও
+          growth resources.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>05</em>
+        <h3>YouTube Marketing</h3>
+        <p>
+          Channel, content strategy ও
+          audience growth.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>06</em>
+        <h3>Digital Presence</h3>
+        <p>
+          Branding, profile, content ও
+          online positioning.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BONUS VAULT -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="bonus">
+
+      <div class="kicker">
+        🎁 BONUS VAULT
+      </div>
+
+      <h2>
+        শুধু CPA নয় — আরও Premium Resources
+      </h2>
+
+      <p class="lead">
+        B01 Premium Access-এর সঙ্গে অতিরিক্ত
+        learning resources ও creative assets
+        bonus হিসেবে যুক্ত থাকবে।
+      </p>
+
+
+      <div class="bonus-grid">
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ 1,000+ Premium Font & Text Design Resources
+          </b>
+
+          <p>
+            Writing, typography, text design ও
+            creative content-এর premium collection.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ Web Design Courses
+          </b>
+
+          <p>
+            Website layout, visual structure ও
+            practical resources.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ Web Development Courses
+          </b>
+
+          <p>
+            Web building ও development-related
+            resources.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ Graphics Design Courses
+          </b>
+
+          <p>
+            Creative design, visual content ও
+            graphics resources.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ Facebook Marketing Courses
+          </b>
+
+          <p>
+            Page, content, promotion ও
+            marketing resources.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-item">
+
+          <b>
+            ✦ YouTube Marketing Courses
+          </b>
+
+          <p>
+            Channel growth, content strategy ও
+            audience-building resources.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LEARNING MAP -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div class="kicker">
+        12+ LEARNING AREAS
+      </div>
+
+      <h2>
+        Core Learning Map
+      </h2>
+
+    </div>
+
+
+    <div class="grid">
+
+      <div class="card">
+        <em>01</em>
+        <h3>CPA Basics</h3>
+        <p>
+          CPA model ও foundation.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>02</em>
+        <h3>Offer Research</h3>
+        <p>
+          Offer selection ও planning.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>03</em>
+        <h3>Traffic</h3>
+        <p>
+          Traffic sources ও promotion.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>04</em>
+        <h3>Content</h3>
+        <p>
+          Content-led marketing.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>05</em>
+        <h3>Landing Pages</h3>
+        <p>
+          Conversion-focused structure.
+        </p>
+      </div>
+
+      <div class="card">
+        <em>06</em>
+        <h3>Branding</h3>
+        <p>
+          Professional online identity.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAYMENT -->
+
+<section id="order">
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div class="kicker">
+        SECURE ORDER
+      </div>
+
+      <h2>
+        Payment খুব সহজ
+      </h2>
+
+      <p class="lead">
+        Payment → Order Form → Verification → Gmail Access.
+      </p>
+
+    </div>
+
+
+    <div class="payment">
+
+
+      <!-- PAYMENT NUMBER -->
+
+      <div class="pay">
+
+        <span class="tag">
+          bKash / Nagad
+        </span>
+
+        <h3>
+          ৳199 Premium Access
+        </h3>
+
+        <div class="number">
+          01945 409627
+        </div>
+
+        <div class="notice">
+          ⚠️ কখনোই PIN, OTP বা password কাউকে দেবেন না।
+        </div>
+
+      </div>
+
+
+      <!-- PAYMENT STEPS -->
+
+      <div class="pay">
+
+        <div class="step">
+
+          <b>
+            ১. Payment করুন
+          </b>
+
+          <p>
+            bKash বা Nagad দিয়ে ৳199
+            payment complete করুন।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <b>
+            ২. Transaction ID রাখুন
+          </b>
+
+          <p>
+            Transaction ID ও payment screenshot
+            সংরক্ষণ করুন।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <b>
+            ৩. Order Form পূরণ করুন
+          </b>
+
+          <p>
+            নাম, মোবাইল, Gmail, payment method,
+            Transaction ID ও screenshot দিন।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <b>
+            ৪. Verification
+          </b>
+
+          <p>
+            Payment যাচাই হওয়ার পর
+            order status update হবে।
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <b>
+            ৫. Premium Access
+          </b>
+
+          <p>
+            Approved Gmail account-এ
+            Google Drive access দেওয়া হবে।
+          </p>
+
+        </div>
+
+
+        <a
+          class="btn primary"
+          style="width:100%;text-align:center;margin-top:10px"
+          target="_blank"
+          rel="noopener"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
+        >
+          📝 Order Form খুলুন →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div class="kicker">
+        QUICK ANSWERS
+      </div>
+
+      <h2>
+        গুরুত্বপূর্ণ প্রশ্ন
+      </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+      <details>
+
+        <summary>
+          ৳199-এ কী পাব?
+        </summary>
+
+        <p>
+          25+ Premium Courses,
+          1,000+ Premium Video Lessons
+          এবং Premium Bonus Vault-এর resources.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Bonus কি included?
+        </summary>
+
+        <p>
+          হ্যাঁ, বর্তমান B01 offer structure
+          অনুযায়ী Bonus Vault included.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Payment-এর পর access কবে?
+        </summary>
+
+        <p>
+          Payment verification সম্পন্ন হওয়ার পর
+          approved Gmail-এ access দেওয়া হবে।
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Access share করা যাবে?
+        </summary>
+
+        <p>
+          না। Personal Use Only.
+          Link share, copy, resell বা
+          redistribute করা যাবে না।
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="cta">
+
+      <div class="kicker">
+        READY WHEN YOU ARE
+      </div>
+
+      <h2>
+        একটি Access-এ শুরু করুন
+        আপনার Digital Learning Journey.
+      </h2>
+
+      <p class="lead">
+        25+ courses + 1,000+ video lessons
+        + Bonus Vault —
+        একটি compact premium access-এর মধ্যে।
+      </p>
+
+      <a
+        class="btn primary"
+        href="#order"
+      >
+        🚀 B01 Premium Access নিন
       </a>
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-grid">
-
-      <div>
-        <div class="badge">✦ PREMIUM DIGITAL LEARNING PROGRAM</div>
-
-        <h1>
-          Learn.<br>
-          Build.<br>
-          <span>Grow with CPA.</span>
-        </h1>
-
-        <p class="hero-text">
-          অনলাইন জগতে শুধু দেখে যাওয়ার জন্য নয়—
-          <strong>শিখুন, প্রয়োগ করুন এবং নিজের Digital Future তৈরি করুন।</strong>
-          B01 — CPA Launchpad আপনাকে CPA Marketing ও আধুনিক Digital Skills
-          সম্পর্কে একটি structured learning journey দিতে তৈরি করা হয়েছে।
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary"
-             href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
-             target="_blank">
-            🚀 Get B01 Access
-          </a>
-
-          <a class="btn btn-light" href="#modules">
-            Explore Course
-          </a>
-        </div>
-      </div>
-
-
-      <div class="offer-card">
-        <div class="offer-label">B01 SPECIAL LAUNCH OFFER</div>
-
-        <div class="old-price">Regular Value ৳20,000</div>
-
-        <div class="price">৳199</div>
-
-        <span class="limited">Limited-Time Launch Offer</span>
-
-        <ul class="offer-list">
-          <li>12+ Premium Course Files</li>
-          <li>1,500+ Video Lessons</li>
-          <li>CPA Marketing Learning</li>
-          <li>Digital & Social Media Skills</li>
-          <li>Practical Learning Resources</li>
-        </ul>
-
-        <a class="btn btn-primary"
-           style="width:100%;"
-           href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
-           target="_blank">
-          Get Started — ৳199
-        </a>
-      </div>
 
     </div>
-  </header>
-
-
-  <!-- HIGHLIGHTS -->
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">Inside B01</div>
-        <h2>একটি Course নয় — একটি Digital Learning Journey</h2>
-        <p>
-          B01-এর ভেতরে CPA Marketing থেকে শুরু করে Traffic, Landing Page,
-          Tracking, Conversion এবং Growth-এর গুরুত্বপূর্ণ ধারণাগুলো
-          step-by-step শেখার সুযোগ থাকবে।
-        </p>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlight">
-          <div class="highlight-number">12+</div>
-          <h3>Premium Course Files</h3>
-          <p>
-            CPA Marketing ও Digital Marketing-এর বিভিন্ন গুরুত্বপূর্ণ
-            বিষয়কে আলাদা learning modules-এ সাজানো হয়েছে।
-          </p>
-        </div>
-
-        <div class="highlight">
-          <div class="highlight-number">1,500+</div>
-          <h3>Video Lessons</h3>
-          <p>
-            বিভিন্ন বিষয় বুঝতে সাহায্য করার জন্য বিশাল একটি
-            video learning library।
-          </p>
-        </div>
-
-        <div class="highlight">
-          <div class="highlight-number">B01</div>
-          <h3>Learn → Apply → Grow</h3>
-          <p>
-            শুধু information নয়—শেখা বিষয়গুলো বাস্তবে কীভাবে
-            কাজে লাগানো যায়, সেই mindset তৈরি করাই লক্ষ্য।
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 12 MODULES -->
-  <section id="modules">
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">CPA Marketing Curriculum</div>
-
-        <h2>
-          B01-এর 12টি Premium Learning Module
-        </h2>
-
-        <p>
-          CPA Marketing-এর গুরুত্বপূর্ণ building blocks থেকে শুরু করে
-          traffic, conversion, tracking এবং growth—একটি পূর্ণাঙ্গ
-          learning roadmap-এর ধারণা।
-        </p>
-      </div>
-
-
-      <div class="modules">
-
-        <div class="module">
-          <div class="module-no">01</div>
-          <h3>CPA Marketing Fundamentals</h3>
-          <p>
-            CPA Marketing কী, কীভাবে কাজ করে এবং advertiser,
-            affiliate ও customer-এর মধ্যে পুরো ecosystem কীভাবে
-            কাজ করে—তার foundation তৈরি করুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">02</div>
-          <h3>CPA Networks & Offers</h3>
-          <p>
-            CPA networks, offers, payout এবং offer selection-এর
-            গুরুত্বপূর্ণ ধারণাগুলো বুঝে সঠিক opportunity
-            চিনতে শিখুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">03</div>
-          <h3>Offer Research & Selection</h3>
-          <p>
-            কোন offer আপনার traffic ও audience-এর জন্য উপযুক্ত,
-            সেটি evaluate করার basic research ও decision-making
-            approach শিখুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">04</div>
-          <h3>Traffic Generation</h3>
-          <p>
-            CPA Marketing-এ traffic কেন গুরুত্বপূর্ণ এবং বিভিন্ন
-            traffic source কীভাবে কাজ করে—তার practical overview
-            পান।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">05</div>
-          <h3>Free Traffic Strategies</h3>
-          <p>
-            Organic ও free traffic-এর বিভিন্ন সম্ভাব্য source,
-            audience building এবং consistent traffic-এর
-            fundamentals সম্পর্কে জানুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">06</div>
-          <h3>Paid Traffic Basics</h3>
-          <p>
-            Paid advertising-এর core concepts, campaign thinking,
-            audience targeting এবং budget awareness-এর foundation
-            তৈরি করুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">07</div>
-          <h3>Landing Page & Pre-Lander</h3>
-          <p>
-            Landing page কীভাবে visitor-এর attention ধরে এবং
-            pre-lander, CTA ও user journey কীভাবে conversion-এর
-            সঙ্গে সম্পর্কিত—তা বুঝুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">08</div>
-          <h3>Conversion Optimization</h3>
-          <p>
-            Click থেকে action পর্যন্ত user journey analyse করে
-            conversion improve করার basic principles শিখুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">09</div>
-          <h3>Tracking & Analytics</h3>
-          <p>
-            Traffic কোথা থেকে আসছে, user কী করছে এবং campaign
-            performance কীভাবে measure ও analyse করা যায়—তার
-            fundamentals জানুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">10</div>
-          <h3>Social Media & Digital Presence</h3>
-          <p>
-            Facebook, LinkedIn, website ও অন্যান্য digital platform
-            ব্যবহার করে professional online presence তৈরির
-            গুরুত্বপূর্ণ ধারণাগুলো শিখুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">11</div>
-          <h3>Testing & Optimization</h3>
-          <p>
-            কোন strategy কাজ করছে আর কোনটি করছে না—সেটি বুঝে
-            testing, comparison এবং continuous improvement-এর
-            mindset তৈরি করুন।
-          </p>
-        </div>
-
-        <div class="module">
-          <div class="module-no">12</div>
-          <h3>Scaling & Digital Growth</h3>
-          <p>
-            একটি working strategy থেকে কীভাবে আরও organized,
-            sustainable এবং long-term digital growth-এর দিকে
-            এগোনো যায়—তার ধারণা তৈরি করুন।
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- VIDEO -->
-  <section class="video-section" id="preview">
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">Course Preview</div>
-
-        <h2>দেখুন B01-এর Learning Experience</h2>
-
-        <p>
-          নিচের ভিডিওটি B01-এর course content-এর একটি preview।
-          শেখার পরিবেশ ও content style সম্পর্কে ধারণা পেতে
-          ভিডিওটি দেখুন।
-        </p>
-      </div>
-
-      <div class="video-wrap">
-
-        <!--
-          IMPORTANT:
-          এই MP4 ফাইলটিও GitHub repository-তে upload করতে হবে।
-          File name অবশ্যই হবে:
-          03. Advance CPA Marketing Course.mp4
-        -->
-
-        <video controls preload="metadata" playsinline>
-          <source
-            src="03.%20Advance%20CPA%20Marketing%20Course.mp4"
-            type="video/mp4">
-
-          আপনার browser এই video format support করছে না।
-        </video>
-
-      </div>
-
-      <div class="video-note">
-        B01 — Advance CPA Marketing Course Preview
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- LEARNING JOURNEY -->
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">Your Journey</div>
-        <h2>শেখার পথটা হবে Simple কিন্তু Powerful</h2>
-      </div>
-
-      <div class="journey">
-
-        <div class="journey-item">
-          <strong>01 — START</strong>
-          <h3>Foundation</h3>
-          <p>
-            CPA Marketing ও Digital World-এর fundamental concepts
-            পরিষ্কার করুন।
-          </p>
-        </div>
-
-        <div class="journey-item">
-          <strong>02 — LEARN</strong>
-          <h3>Knowledge</h3>
-          <p>
-            Offer, Traffic, Landing Page, Tracking ও Conversion
-            সম্পর্কে structured learning করুন।
-          </p>
-        </div>
-
-        <div class="journey-item">
-          <strong>03 — APPLY</strong>
-          <h3>Practice</h3>
-          <p>
-            শেখা বিষয়গুলো নিয়ে নিজের workflow, strategy ও
-            digital presence তৈরি করার চেষ্টা করুন।
-          </p>
-        </div>
-
-        <div class="journey-item">
-          <strong>04 — GROW</strong>
-          <h3>Progress</h3>
-          <p>
-            Testing, optimization ও continuous learning-এর মাধ্যমে
-            নিজের digital skills আরও উন্নত করুন।
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PAYMENT -->
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">Secure Order Process</div>
-        <h2>আপনার B01 Access শুরু করুন</h2>
-        <p>
-          প্রথমে payment করুন, এরপর নিচের Order Form-এ আপনার
-          payment information submit করুন। Verification-এর পর
-          access delivery-এর পরবর্তী নির্দেশনা দেওয়া হবে।
-        </p>
-      </div>
-
-      <div class="payment-box">
-
-        <h3>Payment Methods</h3>
-
-        <div class="payment-methods">
-
-          <div class="payment">
-            <strong>📱 bKash</strong>
-            <div class="payment-number">01945 409627</div>
-          </div>
-
-          <div class="payment">
-            <strong>📱 Nagad</strong>
-            <div class="payment-number">01945 409627</div>
-          </div>
-
-        </div>
-
-        <p>
-          <strong>Step 01:</strong> উপরের official payment number-এ
-          ৳199 payment করুন।
-        </p>
-
-        <p>
-          <strong>Step 02:</strong> Payment Transaction ID ও
-          screenshot প্রস্তুত রাখুন।
-        </p>
-
-        <p>
-          <strong>Step 03:</strong> নিচের Order Form পূরণ করে
-          submit করুন।
-        </p>
-
-        <div class="security">
-          🔐 <strong>Security Notice:</strong>
-          আপনার PIN, OTP বা password কখনো কারও সঙ্গে share করবেন না।
-          B01 কখনো আপনার PIN, OTP বা password চাইবে না।
-        </div>
-
-        <br>
-
-        <a class="btn btn-primary"
-           style="width:100%;"
-           href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
-           target="_blank">
-          🛒 Complete Your Order
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <div class="eyebrow">FAQ</div>
-        <h2>কিছু গুরুত্বপূর্ণ প্রশ্ন</h2>
-      </div>
-
-      <div class="faq">
-
-        <details>
-          <summary>B01-এর মধ্যে কী কী থাকবে?</summary>
-          <p>
-            B01-এর মধ্যে 12+ Premium Course Files এবং 1,500+
-            Video Lessons-এর একটি learning library রয়েছে,
-            যেখানে CPA Marketing ও Digital Skills-এর বিভিন্ন
-            গুরুত্বপূর্ণ বিষয় নিয়ে learning resources থাকবে।
-          </p>
-        </details>
-
-        <details>
-          <summary>এই course কি শুধু CPA Marketing নিয়ে?</summary>
-          <p>
-            CPA Marketing হলো B01-এর core learning area। এর পাশাপাশি
-            Traffic, Landing Page, Conversion, Tracking, Social Media,
-            Digital Presence এবং Growth-related concepts-ও
-            learning journey-এর অংশ।
-          </p>
-        </details>
-
-        <details>
-          <summary>৳199 offer কি সবসময় থাকবে?</summary>
-          <p>
-            না। ৳199 হলো একটি limited-time launch offer।
-            Offer যেকোনো সময় পরিবর্তন বা শেষ হয়ে যেতে পারে।
-          </p>
-        </details>
-
-        <details>
-          <summary>Payment করার পর কী করতে হবে?</summary>
-          <p>
-            Payment করার পর Order Form পূরণ করে Transaction ID ও
-            payment screenshot submit করতে হবে। Payment verification
-            সম্পন্ন হওয়ার পর access delivery-এর পরবর্তী নির্দেশনা
-            দেওয়া হবে।
-          </p>
-        </details>
-
-        <details>
-          <summary>আমি কি course content অন্যদের দিতে পারব?</summary>
-          <p>
-            না। B01 access personal use-এর জন্য। Course files,
-            videos বা access copy, share, resell বা distribute করা
-            অনুমোদিত নয়।
-          </p>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="container">
-
-      <div class="cta-box">
-
-        <h2>আপনার Digital Journey আজ থেকেই শুরু হোক।</h2>
-
-        <p>
-          Learn the concepts. Understand the system.
-          Build your skills. Explore the digital world with B01 —
-          CPA Launchpad.
-        </p>
-
-        <a class="btn"
-           href="https://docs.google.com/forms/d/e/1FAIpQLScPgsux6Tse_7mJ7GCLipVImPW3yAdO-4qEWXYwuLO52OoA_A/viewform?usp=publish-editor"
-           target="_blank">
-          🚀 Get B01 Access — ৳199
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      © 2026 B01 — CPA Launchpad. All Rights Reserved.
-      <br>
-      Personal Use Only • No Copy • No Resale • No Redistribution
-    </div>
-  </footer>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<div class="wrap footer">
+
+  <b>
+    SKILLVAULT • B01 CPA Launchpad
+  </b>
+
+  <br>
+
+  © 2026 • Premium Learning Access • Personal Use Only
+
+</div>
+
+
+<!-- 4-DAY FIRST VISIT TIMER -->
+
+<script>
+
+const KEY = "b01_first_visit_v2";
+
+const DUR =
+  4 * 24 * 60 * 60 * 1000;
+
+let start =
+  localStorage.getItem(KEY);
+
+if(!start){
+
+  start = Date.now();
+
+  localStorage.setItem(
+    KEY,
+    start
+  );
+
+}
+
+const end =
+  Number(start) + DUR;
+
+
+function tick(){
+
+  let left =
+    Math.max(
+      0,
+      end - Date.now()
+    );
+
+  let t =
+    Math.floor(
+      left / 1000
+    );
+
+
+  document.getElementById("d")
+    .textContent =
+    String(
+      Math.floor(
+        t / 86400
+      )
+    ).padStart(2,"0");
+
+
+  document.getElementById("h")
+    .textContent =
+    String(
+      Math.floor(
+        (t % 86400) / 3600
+      )
+    ).padStart(2,"0");
+
+
+  document.getElementById("m")
+    .textContent =
+    String(
+      Math.floor(
+        (t % 3600) / 60
+      )
+    ).padStart(2,"0");
+
+
+  document.getElementById("s")
+    .textContent =
+    String(
+      t % 60
+    ).padStart(2,"0");
+
+}
+
+
+tick();
+
+setInterval(
+  tick,
+  1000
+);
+
+</script>
 
 </body>
-          </html>
+</html>
